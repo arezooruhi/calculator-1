@@ -1,0 +1,78 @@
+.header {
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5vh;
+    grid-area: header;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+}
+
+.header p {
+    background-color: aquamarine;
+    margin-left: 5px;
+    padding: 6px 0;
+    justify-content: center;
+
+
+}
+
+.displayBar {
+
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    height: 10%;
+
+}
+
+.display p {
+    text-align: right;
+
+}
+
+.historySection {
+    text-align: right;
+    grid-area: historySection;
+    
+}
+
+.keyNumber {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 400px;
+    gap: 1px;
+    grid-area: keyNumber;
+}
+.displaySection{
+    grid-area: displaySection;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas:
+    "header header "
+    "displaySection historySection"
+    " keyNumber historySection"
+
+     ;
+
+}
+
