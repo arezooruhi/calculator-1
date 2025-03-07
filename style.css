@@ -1,78 +1,99 @@
-.header {
-    border: 1px solid;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 5vh;
-    grid-area: header;
-
-}
-
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.header button {
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
-
-}
-
-.header p {
-    background-color: aquamarine;
-    margin-left: 5px;
-    padding: 6px 0;
-    justify-content: center;
-
-
-}
-
-.displayBar {
-
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-    height: 10%;
-
-}
-
-.display p {
-    text-align: right;
-
-}
-
-.historySection {
-    text-align: right;
-    grid-area: historySection;
-    
-}
-
-.keyNumber {
-    border: 1px solid;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 400px;
-    gap: 1px;
-    grid-area: keyNumber;
-}
-.displaySection{
-    grid-area: displaySection;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    grid-template-areas:
+.container {
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas:
     "header header "
     "displaySection historySection"
-    " keyNumber historySection"
+    " keyNumber historySection";
+}
+/* start header */
 
-     ;
-
+.header {
+  border: 1px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-area: header;
+  align-items: center;
 }
 
+.header .headerBtn {
+  display: flex;
+  flex-direction: row;
+}
+.header p {
+  margin-left: 5px;
+}
+
+/* end of header */
+
+/* start display section */
+
+.displaySection {
+  grid-area: displaySection;
+  display: flex;
+  flex-direction: column;
+}
+.displaySection .displayBar {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+}
+
+.displaySection .display {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 10vw;
+}
+
+.displaySection .memorySection {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 8%;
+}
+
+/* end of display section */
+
+/* start key number */
+
+.keyNumber {
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 400px;
+  gap: 1px;
+  grid-area: keyNumber;
+}
+
+/* end of key number */
+
+/* start history */
+
+.historySection {
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+  padding: 3% 0 0 3%;
+}
+
+.historySection .historyMemory {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.historySection .resultSection {
+  display: flex;
+  flex-direction: row;
+}
+
+/* end of history */
