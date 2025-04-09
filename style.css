@@ -6,7 +6,7 @@
 .container {
   display: grid;
   grid-template-columns: auto 320px;
-  grid-template-rows: 5% auto 420px;
+  grid-template-rows:4% auto 420px;
   grid-template-areas:
   "header header"
   "displaySection historySection"
@@ -25,17 +25,40 @@
   justify-content: space-between;
   grid-area: header;
   align-items: center;
-  background-color: aqua;
+
 }
 
-.header .headerBtn {
+.header .headerBtn { 
   display: flex;
   flex-direction: row;
+  height:100%;
+  min-width: 140px;
+  /* justify-content: center; */
+
+
 }
-.header p {
+.header .calcName {
   margin-left: 5px;
 }
+.header .headerBtn p{
+flex-grow: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+transition:0.5s;
 
+
+
+}
+
+.header .headerBtn .closeBtn:hover{
+  background-color: red;
+  color: white;
+}
+.header .headerBtn p:hover{
+background-color: gray;
+
+}
 /* end of header */
 
 /* start display section */
@@ -92,6 +115,8 @@
   gap: 1px;
   grid-area: keyNumber;
   background-color: yellow;
+  
+
 }
 .keyNumber p{
   display: flex;
